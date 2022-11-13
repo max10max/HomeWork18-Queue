@@ -5,9 +5,10 @@ import java.util.Queue;
 public class Main {
     public static void main(String[] args) {
         Queue<Person> attraction = new LinkedList<>();
+        List<Person> players = generateClients();
 
-        for (int i = 0; i < generateClients().size(); i++) {
-            attraction.offer(generateClients().get(i));
+        for (int i = 0; i < players.size(); i++) {
+            attraction.offer(players.get(i));
         }
 
         while (!attraction.isEmpty()) {
@@ -20,7 +21,6 @@ public class Main {
                     attraction.offer(person);
                 }
             }
-
         }
     }
 
